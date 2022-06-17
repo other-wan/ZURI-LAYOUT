@@ -1,0 +1,132 @@
+/* font-family: 'Big Shoulders Display', cursive; */
+/* font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+    --black-orange-: hsl(31, 77%, 52%);
+    --dark-cyan-: hsl(184, 100%, 22%);
+    --very-dark-cyan-: hsl(179, 100%, 13%);
+
+    --transparent-white-: hsla(0, 0%, 100%, 0.75);
+    --light-gray-: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    color: var(--transparent-white-);
+    font-size: 0.9375rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    background: var(--transparent-white-);
+}
+
+body, 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 70vh;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main div {
+    padding: 30px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.card img {
+    width: 64px;
+    height: 40px;
+}
+
+.card img,
+.card h1,
+.card p {
+    margin-bottom: 20px;
+}
+
+.card button {
+    margin-top: 20px;
+    border: none;
+    appearance: none;
+    background: var(--transparent-white-);
+    border-radius: 40px;
+    padding: 12px 24px;
+    width: 140px;
+    font-weight: bold;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background: none;
+    outline: 2px solid var(--transparent-white-);
+    color: var(--transparent-white-);
+}
+
+.btn-sedan {
+    color: var(--black-orange-);
+}
+
+.btn-suv {
+    color: var(--dark-cyan-);
+}
+
+.btn-luxury {
+    color: var(--very-dark-cyan-);
+}
+
+.sedan {
+    background: var(--black-orange-);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.suv {
+    background: var(--dark-cyan-);
+}
+
+.luxury {
+    background: var(--very-dark-cyan-);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 50px 0;
+    }
+    main {
+        min-height: 100vh;
+        height: 100%;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .card {
+        border-radius: 8px;
+    }
+}
