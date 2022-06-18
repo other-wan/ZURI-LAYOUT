@@ -1,5 +1,3 @@
-/* font-family: 'Big Shoulders Display', cursive; */
-/* font-family: 'Lexend Deca', sans-serif; */
 
 :root {
     --black-orange-: hsl(31, 77%, 52%);
@@ -20,24 +18,20 @@
 
 body {
     min-height: 100vh;
-    width: 80%;
-    margin: 0 auto;
-    color: var(--transparent-white-);
-    font-size: 0.9375rem;
+    font-size: 0.8rem;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     background: var(--transparent-white-);
-}
-
-body, 
-main {
+    color: var(--transparent-white-);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 main {
-    height: 70vh;
+    width: 70%;
+    height: 60vh;
+    display: flex;
 }
 
 .card {
@@ -51,21 +45,31 @@ main div {
     padding: 30px;
 }
 
-h1 {
-    font-family: 'Big Shoulders Display', cursive;
-    font-weight: 800;
-    font-size: 2rem;
-}
-
 .card img {
     width: 64px;
     height: 40px;
 }
 
-.card img,
-.card h1,
-.card p {
-    margin-bottom: 20px;
+.card h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.sedan {
+    background: var(--black-orange-);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.suv {
+    background: var(--dark-cyan-);
+}
+
+.luxury {
+    background: var(--very-dark-cyan-);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .card button {
@@ -99,34 +103,29 @@ h1 {
     color: var(--very-dark-cyan-);
 }
 
-.sedan {
-    background: var(--black-orange-);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.suv {
-    background: var(--dark-cyan-);
-}
-
-.luxury {
-    background: var(--very-dark-cyan-);
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
 @media screen and (max-width: 768px) {
     body {
-        padding: 50px 0;
+
     }
+
     main {
         min-height: 100vh;
-        height: 100%;
+        height: 100vh;
         flex-direction: column;
         gap: 40px;
+        margin: 60px 0;
     }
 
     .card {
         border-radius: 8px;
     }
+
+    .card img,
+    .card h1,
+    .card p {
+        margin-bottom: 20px;
+    }
+
+
 }
+
