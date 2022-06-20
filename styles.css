@@ -27,6 +27,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.links {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.links a {
+    padding: 10px;
 }
 
 main {
@@ -114,7 +126,6 @@ main div {
 @media screen and (max-width: 768px) {
     main {
         min-height: 100vh;
-        height: 100vh;
         flex-direction: column;
         gap: 40px;
         margin: 60px 0;
